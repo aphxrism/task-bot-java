@@ -26,10 +26,6 @@ public class TaskService implements CrudRepository<Task, Long> {
     }
 
     public Optional<Task> findById (Long id) {
-        if (!this.existsById(id)) {
-            return Optional.empty();
-        }
-
         return tasksList.stream().filter(task -> Objects.equals(task.getId(), id)).findFirst();
     }
 
