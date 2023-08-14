@@ -33,7 +33,7 @@ public class TaskService implements CrudRepository<Task, Long> {
         return tasksList.stream().anyMatch(task -> Objects.equals(task.getId(), id));
     }
 
-    public Iterable<Task> findAll() {
+    public Iterable<Task> findAll () {
         return tasksList;
     }
 
